@@ -34,11 +34,12 @@ router.post('/api/user/my', apiUserController.update);
 // 피드 관련 라우트, 모든 요청에 인증 필요
 router.use(authenticateToken); // 이후 모든 라우트에 인증 적용
 
-// 마이페이지 라우트, 인증 필요
+// 마이페이지 라우트, 인증 필요 
 router.get('/api/user/my', authenticateToken, apiUserController.show);
 router.put('/api/user/my', authenticateToken, apiUserController.update);
 router.get('/api/user/my/feed', apiFeedController.myFeed);
 
+// 피드 관련 라우트
 router.get('/api/feed', apiFeedController.index);
 router.post('/api/feed', apiFeedController.store);
 router.get('/api/feed/favorite', apiFeedController.getFavoriteFeeds);
