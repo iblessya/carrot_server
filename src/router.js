@@ -39,7 +39,7 @@ router.get('/api/user/my', authenticateToken, apiUserController.show);
 router.put('/api/user/my', authenticateToken, apiUserController.update);
 router.get('/api/user/my/feed', apiFeedController.myFeed);
 
-// 피드 관련 라우트
+// 피드 관련 라우트 마스터 할 것
 router.get('/api/feed', apiFeedController.index);
 router.post('/api/feed', apiFeedController.store);
 router.get('/api/feed/favorite', apiFeedController.getFavoriteFeeds);
